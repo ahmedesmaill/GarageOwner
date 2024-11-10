@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ORANGE_700"
+    android:orientation="vertical"
+    android:id="@+id/nav_header">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img_profile"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_icon"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/user_name_nav"
+        style="@style/txt_nav_txt"
+        android:text="User Name" />
+
+    <TextView
+        android:id="@+id/user_balance"
+        style="@style/txt_nav_txt"
+        android:text="Balance" />
+    <RadioGroup
+        android:id="@+id/lang_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/user_balance"
+        android:visibility="gone"
+        >
+
+        <RadioButton
+            android:id="@+id/arab_lang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="32dp"
+            android:text="العربية"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/eng_lang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="32dp"
+            android:text="english"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+</LinearLayout>

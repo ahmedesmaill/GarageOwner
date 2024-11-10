@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Sign.Sign_up4"
+    android:layout_margin="16dp"
+    android:layout_marginTop="16dp"
+    >
+    <TextView
+        android:id="@+id/signup4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <View
+        android:id="@+id/viewNot"
+        android:layout_width="52dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/davidlogin"
+        app:layout_constraintTop_toBottomOf="@id/signup4"
+        app:layout_constraintStart_toStartOf="@id/signup4"
+        />
+    <TextView
+        android:id="@+id/continue4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:padding="6dp"
+        android:text="@string/continue2"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/viewNot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/info4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/continue4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/information_about_payment_operation"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        />
+    <TextView
+        android:id="@+id/step4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:gravity="fill_horizontal"
+        android:text="@string/step4_4"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/info4"
+        app:layout_constraintStart_toStartOf="@id/continue4"
+        app:layout_constraintEnd_toEndOf="@id/continue4"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bankAccountName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/step4"
+        app:layout_constraintStart_toStartOf="@id/info4"
+        android:layout_margin="24dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/bank_account_name"
+        app:expandedHintEnabled="false"
+        android:textColorHint="@color/black"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bankAccountNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/bankAccountName"
+        app:layout_constraintStart_toStartOf="@id/bankAccountName"
+        android:layout_margin="24dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/bank_account_number"
+        app:expandedHintEnabled="false"
+        android:textColorHint="@color/black"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/addNationalIdIMG"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/enter_a_pic_n_for_national_id_card"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bankAccountNum" />
+
+    <LinearLayout
+        android:id="@+id/layout_success_4"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addNationalIdIMG">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="2dp"
+            android:contentDescription="@string/img_success"
+            android:src="@drawable/offline" />
+
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="2dp"
+            android:contentDescription="@string/img_success"
+            android:src="@drawable/offline" />
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="2dp"
+            android:contentDescription="@string/img_success"
+            android:src="@drawable/offline" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/online"
+            android:contentDescription="@string/img_success" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next_sign4"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_btn"
+        android:text="@string/finish"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_success_4" />
+
+    <TextView
+        android:id="@+id/by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/by_signning_up_you_agree_with_our"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next_sign4" />
+
+    <TextView
+        android:id="@+id/terms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/terms_amp_conditions"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/by"
+        app:layout_constraintTop_toTopOf="@id/by" />
+</androidx.constraintlayout.widget.ConstraintLayout>
